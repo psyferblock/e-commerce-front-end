@@ -3,24 +3,43 @@
     padding:0;
     box-sizing: border-box;
 }
+.logo-img{
+    width: 150px;
+    height:auto;
+}
 .navbar{
     display: flex;
     align-items: center;
     padding: 20px;
 }
-.nav{
+nav{
     flex: 1;
     text-align: right;
 }
-.nav ul{
+nav ul{
     display: inline-block;
     list-style-type: none;
 }
-.nav ul li{
+nav ul li{
     display: inline-block;
     margin: 20px;
 }
 a{
     text-decoration: none;
     color: #555;
+}
+.container{
+    max-width: 98vw;
+    margin: auto;
+    padding-left:1vw ;
+    padding-right: 1vw;
+}
+/* main view of elements */
+.main-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* search bar and its elements */
+.search-box{
+    display: flex;
 }

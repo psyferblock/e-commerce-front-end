@@ -8,23 +8,86 @@
     <link rel="stylesheet" href="../front-end/style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="../front-end/images/logo.png" class="logo-img" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">products</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">contact</a></li>
-                <li><a href="">account</a></li>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../front-end/images/logo.png" class="logo-img" alt="">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">account</a></li>
+                </ul>
+            </nav>
+         </div>
+         
+        <div class ="main-box">
+            <div>
+                <h3>browse</h3>
+                <form action="">
+                    <input type="text">
+                </form> 
+                <ul class = "interesting-elements">
 
-
+                </ul>
+            </div>
+            <div >
+                <div class="search-box">
+                    <h3>search</h3>
+                <form action="">
+                    <input type="text">
+                </form> 
+                </div>
+                
+            <ul class="liked-elements">
 
             </ul>
-        </nav>
+            </div>
+            
+        </div>
     </div>
     
+                  
+    <div class="modal-wrapper-signup none" id="modal-wrapper">
+        <div class="modal">
+            
+            <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
+                <div>
+                    <label for="name">name</label>
+                    <input class="" type="text" id="" placeholder="name"name="name"  required >
+                </div>
+                <div>
+                    <label for="email"></label>
+                    <input class="" type="text" id="" placeholder="email "name="password"  required >
+                </div>
+                <div>
+                    <label for="password"></label>
+                    <input class="" type="text" id="" placeholder="password "name="password" minlength="8" required >
+                </div>    
+                <button  class="" id="" type="button"> signUp</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-wrapper-signin none" id="modal-wrapper">
+        <div class="modal">
+            
+            <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
+                
+                <div>
+                    <label for="email"></label>
+                    <input class="" type="text" id="" placeholder="email "name="password"  required >
+                </div>
+                <div>
+                    <label for="password"></label>
+                    <input class="" type="text" id="" placeholder="password "name="password" minlength="8" required >
+                </div>    
+                <button  class="" id="" type="button"> signUp</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
