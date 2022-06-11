@@ -15,32 +15,41 @@
                 <img src="../front-end/images/logo.png" class="logo-img" alt="">
             </div>
             <nav class="nav">
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">products</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
-                    <li><a href="#">account</a></li>
+                <ul class="nav-ul">
+                    <li class="nav-ul-li"><a href="#">home</a></li>
+                    <li class="nav-ul-li"><a href="#">sign in</a></li>
+                    <li class="nav-ul-li"><a href="#">sign up</a></li>
+                    <li class="nav-ul-li"><a href="#">contact</a></li>
                 </ul>
             </nav>
          </div>
          
         <div class ="main-box">
             <div>
-                <h3>browse</h3>
                 <form action="">
-                    <input type="text">
-                </form> 
+                    <label for="category" class="textbox">category</label>
+                        <select class="textbox" name="category" id="gender" required>
+                            <option value="0">all</option>
+                            <option value="1">home</option>
+                            <option value="2">backyard</option>
+                            <option value="3">farm</option>
+                            <option value="4">tech</option>
+                            <option value="5">action</option>
+
+                        </select>
+                </form>
                 <ul class = "interesting-elements">
 
                 </ul>
             </div>
             <div >
                 <div class="search-box">
-                    <h3>search</h3>
-                <form action="">
-                    <input type="text">
-                </form> 
+                    <form action="">
+                        <label for="search">search</label>
+                        <input class="search-bar" type="text" id="" placeholder="search"name="search"  required >
+                        <button class="serarch-bar-btn" id=""></button>
+                    </form>
+                
                 </div>
                 
             <ul class="liked-elements">
@@ -51,8 +60,24 @@
         </div>
     </div>
     
+    <div class="login-modal">
+        <div class="login-form">
+          <div class="login-user">
+            <div class="login-header">
+              <h3>LOGIN</h3>
+              <p>your email and password please</p>
+            </div>
+          </div>
+          <form class="login-form">
+            <input type="text" placeholder="email"/>
+            <input type="password" placeholder="password"/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
                   
-    <div class="modal-wrapper-signup none" id="modal-wrapper">
+    <!-- <div class="modal-wrapper-signup none" id="modal-wrapper">
         <div class="modal">
             
             <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
@@ -85,9 +110,9 @@
                     <label for="password"></label>
                     <input class="" type="text" id="" placeholder="password "name="password" minlength="8" required >
                 </div>    
-                <button  class="" id="" type="button"> signUp</button>
+                <button  class="" id="" type="button"> signip</button>
             </form>
         </div>
     </div>
 </body>
-</html>
+</html> -->

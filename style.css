@@ -1,7 +1,21 @@
+:root{
+    --background:#555;
+    /* --dark-primary:#;
+    --light-primary:#;
+    --dark-secondary:#;
+    --light-secondary:#; */
+}
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    /* background-image: linear-gradient(45deg,#328f8a,#08ac4b) */
+
+}
+body{
+    background-color: var(--background);
+
+
 }
 .logo-img{
     width: 150px;
@@ -10,29 +24,36 @@
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content:end;
+    flex:1;
+
+    /* padding: 20px; */
 }
-nav{
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex: 1;
     text-align: right;
+    background-color: transparent;
 }
-nav ul{
+.nav-ul{
     display: inline-block;
     list-style-type: none;
+
 }
-nav ul li{
+.nav-ul-li{
     display: inline-block;
     margin: 20px;
 }
-a{
-    text-decoration: none;
-    color: #555;
-}
+
+
 .container{
     max-width: 98vw;
     margin: auto;
     padding-left:1vw ;
     padding-right: 1vw;
+    background-color: transparent;
 }
 /* main view of elements */
 .main-box{
@@ -43,3 +64,62 @@ a{
 .search-box{
     display: flex;
 }
+
+/* login div  */
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .login-page .login-form .login-user{
+    margin-top: -31px;
+  margin-bottom: 26px;
+  }
+  .login-form {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .login-form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: transparent;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .login-form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .login-form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+  .form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+ 
