@@ -19,8 +19,45 @@ function generateLoginForm(){
              <button class="button-submit" id="login-button">login</button>
          </form>
          </div>
-     </div>`        
+     </div>`  
+    let login_button=document.getElementById("login-button")
+     
+     login_button.addEventListener("click",submitLoginInfo);
+    function submitLoginInfo(e){
+        e.preventDefault()
+        // login info
+        let login_email=document.getElementById("login-email")
+        let login_password=document.getElementById("signin-password")
+        let data=new FormData()
+
+        data.append('email',login_email.value)
+        data.append('password',login_password.value)
+        console.log(response)
+    axios({
+        method:"post",
+        url:"http://127.0.0.1:8000/api/v1/users/login_user/",
+        data:data,
+
+    }).then((response)=>{
+        console.log(response)
+        let token = response.data.access;
+        localStorage.setItem("SavedToken", 'Bearer ' + token);
+        // defaults.headers.common['Authorization'] = 'Bearer ' + token;
+        // (this.$router.push({name:'HomePage'}));
+        // if (response.data==["message"]){
+            //   gives authorisation to like the items
+            console.log(response.data)
+         
+        // }
+    }).catch((error)=>{
+        console.log(error)
+    })
+    emptyDiv(container)
+
+    }
+
 }
+
 const user_signup = document.getElementById("user-signup")
 user_signup.addEventListener("click",generateSignupForm)
 function generateSignupForm(){
@@ -38,67 +75,53 @@ function generateSignupForm(){
              <input type="text" placeholder="name"id="signup-name"/>
              <input type="text" placeholder="email" id="signup-email"/>
              <input type="password" placeholder="password" id="signup-password"/>
-             <button class="button-submit id="signup-button">signup</button>
+             <button class="button-submit" id="signup-button">signup</button>
          </form>
          </div>
      </div>`
+
+    let signup_button=document.getElementById("signup-button")
+
+        
+    signup_button.addEventListener("click",submitSignupInfo)
+    function submitSignupInfo(e){
+        e.preventDefault()
+        // signin info 
+        let signup_name=document.getElementById("signup-name")
+        let signup_email=document.getElementById("signup-email")
+        let signup_password=document.getElementById("signup-password")
+        let data = new FormData()
+        data.append('name',signup_name.value)
+        data.append('email',signup_email.value)
+        data.append('password',signup_password.value)
+
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:8000/api/v1/users/register_user/",
+            data:data,
+            
+
+        }).then((response)=>{
+            console.log("response/",response)
+
+            if (response.data==['message']){
+                console.log("response/",response)
+
+               
+                if (response.data==["message"]){
+                    //   gives authorisation to like the items
+                }
+                // console.log(token)
+            }
+        })
+        emptyDiv(container_signup)
+
+    }
+
 }
 // function to empty div
 function emptyDiv(div){
      div.innerHTML=('')
 }
 // buttons for login 
-let login_button=document.getElementById("login-button")
-let signup_button=document.getElementById("signup-button")
-
-// signin info
-let login_email=document.getElementById("login-email")
-let login_password=document.getElementById("signin-password")
-
-// signup info
-let signup_name=document.getElementById("signup-name")
-let signup_email=document.getElementById("signup-email")
-let signup_password=document.getElementById("signup-password")
-
-
-login_button.addEventListener("click",submitLoginInfo)
-function submitLoginInfo(e){
-    e.preventDefaule()
-  let data=new FormData()
-  data.append('email',login_email.value)
-  data.append('password',login_password.value)
-  axios({
-      method:"get",
-      url:"",
-      data:data,
-  }).then((response)=>{
-      if (response.data==["message"]){
-        //   gives authorisation to like the items
-      }
-  }).catch((error)=>{
-    console.log(error)
-})
-  emptyDiv(user_signup)
-}
-
-
-signup_button.addEventListener("click",submitSignupInfo)
-function submitSignupInfo(){
-    let data = new FormData()
-    data.append('name',signup_name.value)
-    data.append('email',signup_email.value)
-    data.append('password',signup_password.value)
-    axios({
-        method:"get",
-        url:"",
-        data:data,
-
-    }).then((response)=>{
-        if (response.data==['message']){
-            // gives authorisation to like 
-        }
-    })
-    emptyDiv(user_signup)
-
-}
 

@@ -1,7 +1,7 @@
 :root{
-    --background:#555;
+    --background:rgb(161, 200, 179);
     --dark-primary:#;
-    --light-primary:#;
+    --light-primary:rgb(164, 201, 183);
     --dark-secondary:#;
     --light-secondary:#;
 }
@@ -13,7 +13,7 @@
 
 }
 body{
-    /* background-color: var(--background); */
+    background-color: var(--light-primary);
 
 
 }
@@ -22,13 +22,32 @@ body{
     background-color:transparent;
 }
 .logo{
-    width: 70px;
+    /* width: 70px; */
     height: 70px;
-    background-color: gray;
+    background-color: var(--background);
+    display: flex;
+    gap:2px;
+    align-items: center;
+    justify-content: center;
+    
 }
-.logo-img{
-    width: 150px;
-    height:auto;
+.h3-logo{
+    font-size: 2rem;
+    display: flex;
+    gap:2px;
+    color: rgb(125, 97, 97);
+
+}
+.span-logo{
+    font-size:1.5rem;
+    padding-top: 10px;
+    color: rgb(81, 53, 53);
+    margin-left:10px;
+
+
+    
+
+
 }
 .navbar{
     display: flex;
@@ -52,7 +71,6 @@ body{
     margin: 20px;
 }
 
-
 .container{
     max-width: 98vw;
     margin: auto;
@@ -72,6 +90,7 @@ body{
     align-items: center;
     gap:1rem;
     margin: 3rem 0 3rem 0;
+    padding:5px;
 
 }
 .main-container{
@@ -89,7 +108,7 @@ body{
 .item{
     width:auto;
     height: auto;
-    background-color: blue;
+    background-color: rgb(125, 125, 162);
     border: 1px solid white;
     display: flex;
 
@@ -100,8 +119,17 @@ body{
 }
 .search-box{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.search-bar{
+    width: 150px;
+    height:30px;
+}
+.textbox{
+    width: 150px;
+    height:30px;
+}
 
 /* login div  */
 

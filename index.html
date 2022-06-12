@@ -7,28 +7,35 @@
     <title>e-commerce</title>
     <link rel="stylesheet" href="../front-end/style.css">
     <script src="../front-end/user.js" defer></script>
+    <script src="../front-end/itemsStructure.js" defer></script>
+
+
+
 </head>
 <body>
-    
+    <!-- nav bar for the signin/signout/logout -->
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="../front-end/images/logo.png" class="logo-img" alt="">
+                <!-- logo -->
+                <p class="h3-logo">Commerce <span class="span-logo">with <span> ease </span> </span></p>
             </div>
+            <!-- navbar link items -->
             <nav class="nav">
                 <ul class="nav-ul">
-                    <li class="nav-ul-li" id="user-login"><a href="#">sign in</a></li>
+                    <li class="nav-ul-li" id="user-login"><a href="#">login in</a></li>
                     <li class="nav-ul-li" id="user-signup"><a href="#">sign up</a></li>
-                    <li class="nav-ul-li"><a href="#">contact</a></li>
+                    <li class="nav-ul-li"><a href="#">logout</a></li>
                 </ul>
             </nav>
          </div>
-         
+         <!-- main div for page displayed elements -->
         <main class ="main-box">
             <div class="control-container">
+                <!-- categories form -->
                 <form action="">
                     <label for="category" class="textbox">category</label>
-                    <select class="textbox" name="category" id="category" required>
+                    <select class="textbox" name="category" id="category" value="all" required>
                         <option value="all">all</option>
                         <option value="home">home</option>
                         <option value="backyard">backyard</option>
@@ -38,42 +45,23 @@
                         <option value="liked">liked</option>
                     </select>
                 </form>
-                
+                <!-- search bar -->
                 <form action="">
                     <label for="search">search</label>
                     <input class="search-bar" type="text" id="" placeholder="search"name="search"  required >
-                    <button class="serarch-bar-btn" id=""></button>
+                    <input type="button" class="textbox" id="search-bar-btn" placeholder="search">
                 </form>
             </div>
+            <!-- container that displays the elemnts from the database -->
             <div class="main-container"> 
                 <div class="results-container">
-                    <div class="item">
-                        <div class="item-input">
-                        <h3>name:${name}</h3>
-                        <h3>category:${name}</h3>
-                        <h3>price:${price}</h3>
-                        </div>
-                        <img src="${image}" alt="">
-                        
-                    </div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+                   
 
                 </div>
+                <!-- login form  -->
                 <div class="login-signup-form"id="login-signup-form"></div>
-                <div class="signup-form"id="signup-form"></div>
+                <!-- sign up form  -->
+                <div class="login-signup-form"id="signup-form"></div>
 
             </div>
         </main>
@@ -81,6 +69,7 @@
 
         
   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"  ></script>
                   
    
 </body>
