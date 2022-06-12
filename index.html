@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-commerce</title>
     <link rel="stylesheet" href="../front-end/style.css">
+    <script src="../front-end/user.js"></script>
 </head>
 <body>
     
@@ -16,9 +17,8 @@
             </div>
             <nav class="nav">
                 <ul class="nav-ul">
-                    <li class="nav-ul-li"><a href="#">home</a></li>
-                    <li class="nav-ul-li"><a href="#">sign in</a></li>
-                    <li class="nav-ul-li"><a href="#">sign up</a></li>
+                    <li class="nav-ul-li" id="user-login"><a href="#">sign in</a></li>
+                    <li class="nav-ul-li" id="user-signup"><a href="#">sign up</a></li>
                     <li class="nav-ul-li"><a href="#">contact</a></li>
                 </ul>
             </nav>
@@ -60,7 +60,8 @@
         </div>
     </div>
     
-    <div class="login-modal">
+   <div class="modal-body">
+    <div class="login-modal none">
         <div class="login-form">
           <div class="login-user">
             <div class="login-header">
@@ -72,12 +73,29 @@
             <input type="text" placeholder="email"/>
             <input type="password" placeholder="password"/>
             <button>login</button>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
           </form>
         </div>
       </div>
+      <div class="signup-modal none">
+        <div class="login-form">
+          <div class="login-user">
+            <div class="login-header">
+              <h3>SIGNUP</h3>
+              <p>it will be an experience!</p>
+            </div>
+          </div>
+          <form class="login-form none">
+            <input type="text" placeholder="email"/>
+            <input type="text" placeholder="email"/>
+            <input type="password" placeholder="password"/>
+            <button>signup</button>
+          </form>
+        </div>
+      </div>
+   </div> 
+   
                   
-    <!-- <div class="modal-wrapper-signup none" id="modal-wrapper">
+    <div class="modal-wrapper-signup none" id="modal-wrapper">
         <div class="modal">
             
             <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
@@ -115,4 +133,4 @@
         </div>
     </div>
 </body>
-</html> -->
+</html>
