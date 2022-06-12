@@ -28,7 +28,7 @@
             <div class="control-container">
                 <form action="">
                     <label for="category" class="textbox">category</label>
-                    <select class="textbox" name="category" id="gender" required>
+                    <select class="textbox" name="category" id="category" required>
                         <option value="all">all</option>
                         <option value="home">home</option>
                         <option value="backyard">backyard</option>
@@ -47,7 +47,15 @@
             </div>
             <div class="main-container"> 
                 <div class="results-container">
-                    <div class="item"></div>
+                    <div class="item">
+                        <div class="item-input">
+                        <h3>name:${name}</h3>
+                        <h3>category:${name}</h3>
+                        <h3>price:${price}</h3>
+                        </div>
+                        <img src="${image}" alt="">
+                        
+                    </div>
                     <div class="item"></div>
                     <div class="item"></div>
                     <div class="item"></div>

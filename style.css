@@ -87,11 +87,16 @@ body{
     gap:1.6rem;
 }
 .item{
-    width:100px;
-    height: 100px;
+    width:auto;
+    height: auto;
     background-color: blue;
     border: 1px solid white;
+    display: flex;
 
+}
+.item-input img{
+    width:200px;
+    height:200px
 }
 .search-box{
     display: flex;
@@ -169,4 +174,11 @@ body{
     text-decoration: none;
   }
   
+  /* item design */
+ 
+  
+  .item-input img{
+    width:200px;
+    height:200px
+  }
  

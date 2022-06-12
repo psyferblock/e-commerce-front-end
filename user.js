@@ -43,24 +43,62 @@ function generateSignupForm(){
          </div>
      </div>`
 }
+// function to empty div
 function emptyDiv(div){
      div.innerHTML=('')
 }
+// buttons for login 
 let login_button=document.getElementById("login-button")
 let signup_button=document.getElementById("signup-button")
 
+// signin info
+let login_email=document.getElementById("login-email")
+let login_password=document.getElementById("signin-password")
+
+// signup info
+let signup_name=document.getElementById("signup-name")
+let signup_email=document.getElementById("signup-email")
+let signup_password=document.getElementById("signup-password")
+
+
 login_button.addEventListener("click",submitLoginInfo)
-function submitLoginInfo(){
-    let login_email=document.getElementById("login-email")
-    let login_password=document.getElementById("signin-password")
+function submitLoginInfo(e){
+    e.preventDefaule()
+  let data=new FormData()
+  data.append('email',login_email.value)
+  data.append('password',login_password.value)
+  axios({
+      method:"get",
+      url:"",
+      data:data,
+  }).then((response)=>{
+      if (response.data==["message"]){
+        //   gives authorisation to like the items
+      }
+  }).catch((error)=>{
+    console.log(error)
+})
+  emptyDiv(user_signup)
 }
 
 
 signup_button.addEventListener("click",submitSignupInfo)
 function submitSignupInfo(){
-    let signup_name=document.getElementById("signup-name")
-    let signup_email=document.getElementById("signup-email")
-    let signup_password=document.getElementById("signup-password")
+    let data = new FormData()
+    data.append('name',signup_name.value)
+    data.append('email',signup_email.value)
+    data.append('password',signup_password.value)
+    axios({
+        method:"get",
+        url:"",
+        data:data,
+
+    }).then((response)=>{
+        if (response.data==['message']){
+            // gives authorisation to like 
+        }
+    })
+    emptyDiv(user_signup)
 
 }
 
