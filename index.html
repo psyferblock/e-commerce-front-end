@@ -24,113 +24,125 @@
             </nav>
          </div>
          
-        <div class ="main-box">
-            <div>
+        <main class ="main-box">
+            <div class="control-container">
                 <form action="">
                     <label for="category" class="textbox">category</label>
-                        <select class="textbox" name="category" id="gender" required>
-                            <option value="0">all</option>
-                            <option value="1">home</option>
-                            <option value="2">backyard</option>
-                            <option value="3">farm</option>
-                            <option value="4">tech</option>
-                            <option value="5">action</option>
-
-                        </select>
+                    <select class="textbox" name="category" id="gender" required>
+                        <option value="all">all</option>
+                        <option value="home">home</option>
+                        <option value="backyard">backyard</option>
+                        <option value="farm">farm</option>
+                        <option value="tech">tech</option>
+                        <option value="action">action</option>
+                        <option value="liked">liked</option>
+                    </select>
                 </form>
-                <ul class = "interesting-elements">
-
-                </ul>
+                
+                <form action="">
+                    <label for="search">search</label>
+                    <input class="search-bar" type="text" id="" placeholder="search"name="search"  required >
+                    <button class="serarch-bar-btn" id=""></button>
+                </form>
             </div>
-            <div >
-                <div class="search-box">
-                    <form action="">
-                        <label for="search">search</label>
-                        <input class="search-bar" type="text" id="" placeholder="search"name="search"  required >
-                        <button class="serarch-bar-btn" id=""></button>
-                    </form>
-                
-                </div>
-                
-            <ul class="liked-elements">
+            <div class="main-container"> 
+                <div class="results-container">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
 
-            </ul>
+                </div>
+                <div class="login-signup-form"></div>
             </div>
             
-        </div>
+              
+            
+        </main>
     </div>
-    
+
    <div class="modal-body">
-    <div class="login-modal none">
-        <div class="login-form">
-          <div class="login-user">
-            <div class="login-header">
-              <h3>LOGIN</h3>
-              <p>your email and password please</p>
-            </div>
-          </div>
-          <form class="login-form">
-            <input type="text" placeholder="email"/>
-            <input type="password" placeholder="password"/>
-            <button>login</button>
-          </form>
+        <div class="login-signup-form none"id="login-signup-form">
+            
         </div>
-      </div>
-      <div class="signup-modal none">
-        <div class="login-form">
-          <div class="login-user">
+        <div class="user-signup ">
+        <div class="signup-form">
+            <div class="login-user">
             <div class="login-header">
-              <h3>SIGNUP</h3>
-              <p>it will be an experience!</p>
+                <h3>SIGNUP</h3>
+                <p>it will be an experience!</p>
             </div>
-          </div>
-          <form class="login-form none">
+            </div>
+            <form class="login-form none">
             <input type="text" placeholder="email"/>
             <input type="text" placeholder="email"/>
             <input type="password" placeholder="password"/>
             <button>signup</button>
-          </form>
+            </form>
         </div>
-      </div>
+        </div>
    </div> 
-   
+   <script>
+       const user_login=document.getElementById("user-login")
+       user_login.addEventListener("click",generateLoginForm)
+       function generateLoginForm(){
+           const container=document.getElementById("login-signup-form")
+           emptyDiv(container)
+           container.innerHTML=`
+            <div class="login-modal">
+                <div class="login-form">
+                <div class="login-user">
+                    <div class="login-header">
+                    <h3>LOGIN</h3>
+                    <p>your email and password please</p>
+                    </div>
+                </div>
+                <form class="login-form">
+                    <input type="text" placeholder="email"/>
+                    <input type="password" placeholder="password"/>
+                    <button>login</button>
+                </form>
+                </div>
+            </div>`        
+       }
+       const user_signup = document.getElementById("user-signup")
+       user_signup.addEventListener("click",generateSignupForm)
+       function generateSignupForm(){
+           const container_signup=document.getElementById("signup-form")
+           container_signup.innerHTML=`
+            <div class="signup-modal none">
+                <div class="login-form">
+                <div class="login-user">
+                    <div class="login-header">
+                    <h3>SIGNUP</h3>
+                    <p>it will be an experience!</p>
+                    </div>
+                </div>
+                <form class="login-form none">
+                    <input type="text" placeholder="email"/>
+                    <input type="text" placeholder="email"/>
+                    <input type="password" placeholder="password"/>
+                    <button>signup</button>
+                </form>
+                </div>
+            </div>`
+       }
+       function emptyDiv(div){
+            div.innerHTML=('')
+       }
+   </script>
                   
-    <div class="modal-wrapper-signup none" id="modal-wrapper">
-        <div class="modal">
-            
-            <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
-                <div>
-                    <label for="name">name</label>
-                    <input class="" type="text" id="" placeholder="name"name="name"  required >
-                </div>
-                <div>
-                    <label for="email"></label>
-                    <input class="" type="text" id="" placeholder="email "name="password"  required >
-                </div>
-                <div>
-                    <label for="password"></label>
-                    <input class="" type="text" id="" placeholder="password "name="password" minlength="8" required >
-                </div>    
-                <button  class="" id="" type="button"> signUp</button>
-            </form>
-        </div>
-    </div>
-    <div class="modal-wrapper-signin none" id="modal-wrapper">
-        <div class="modal">
-            
-            <form id="sign-in-form" class="none" name="sign-in-form" novalidate>
-                
-                <div>
-                    <label for="email"></label>
-                    <input class="" type="text" id="" placeholder="email "name="password"  required >
-                </div>
-                <div>
-                    <label for="password"></label>
-                    <input class="" type="text" id="" placeholder="password "name="password" minlength="8" required >
-                </div>    
-                <button  class="" id="" type="button"> signip</button>
-            </form>
-        </div>
-    </div>
+   
 </body>
 </html>

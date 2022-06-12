@@ -39,7 +39,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex: 1; */
     text-align: right;
     background-color: transparent;
 }
@@ -63,15 +62,43 @@ body{
 }
 /* main view of elements */
 .main-box{
-    display: flex;
-    justify-content: space-evenly;
+   min-height: 100vh;
+
 }
-/* search bar and its elements */
+
+.control-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:20px  ;
+
+}
+.main-container{
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+
+
+}
+.results-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.6rem;
+}
+.item{
+    width:100px;
+    height: 100px;
+    background-color: blue;
+}
 .search-box{
     display: flex;
 }
 
-
+.login-signup-form{
+    width:200px;
+    height:100vh;
+    border: 2px solid black;
+}
 /* login div  */
 
 .login-page {
