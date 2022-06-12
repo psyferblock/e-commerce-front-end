@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-commerce</title>
     <link rel="stylesheet" href="../front-end/style.css">
-    <script src="../front-end/user.js"></script>
+    <script src="../front-end/user.js" defer></script>
 </head>
 <body>
     
@@ -64,84 +64,15 @@
                     <div class="item"></div>
 
                 </div>
-                <div class="login-signup-form"></div>
+                <div class="login-signup-form"id="login-signup-form"></div>
+                <div class="signup-form"id="signup-form"></div>
+
             </div>
-            
-              
-            
         </main>
     </div>
 
-   <div class="modal-body">
-        <div class="login-signup-form none"id="login-signup-form">
-            
-        </div>
-        <div class="user-signup ">
-        <div class="signup-form">
-            <div class="login-user">
-            <div class="login-header">
-                <h3>SIGNUP</h3>
-                <p>it will be an experience!</p>
-            </div>
-            </div>
-            <form class="login-form none">
-            <input type="text" placeholder="email"/>
-            <input type="text" placeholder="email"/>
-            <input type="password" placeholder="password"/>
-            <button>signup</button>
-            </form>
-        </div>
-        </div>
-   </div> 
-   <script>
-       const user_login=document.getElementById("user-login")
-       user_login.addEventListener("click",generateLoginForm)
-       function generateLoginForm(){
-           const container=document.getElementById("login-signup-form")
-           emptyDiv(container)
-           container.innerHTML=`
-            <div class="login-modal">
-                <div class="login-form">
-                <div class="login-user">
-                    <div class="login-header">
-                    <h3>LOGIN</h3>
-                    <p>your email and password please</p>
-                    </div>
-                </div>
-                <form class="login-form">
-                    <input type="text" placeholder="email"/>
-                    <input type="password" placeholder="password"/>
-                    <button>login</button>
-                </form>
-                </div>
-            </div>`        
-       }
-       const user_signup = document.getElementById("user-signup")
-       user_signup.addEventListener("click",generateSignupForm)
-       function generateSignupForm(){
-           const container_signup=document.getElementById("signup-form")
-           container_signup.innerHTML=`
-            <div class="signup-modal none">
-                <div class="login-form">
-                <div class="login-user">
-                    <div class="login-header">
-                    <h3>SIGNUP</h3>
-                    <p>it will be an experience!</p>
-                    </div>
-                </div>
-                <form class="login-form none">
-                    <input type="text" placeholder="email"/>
-                    <input type="text" placeholder="email"/>
-                    <input type="password" placeholder="password"/>
-                    <button>signup</button>
-                </form>
-                </div>
-            </div>`
-       }
-       function emptyDiv(div){
-            div.innerHTML=('')
-       }
-   </script>
+        
+  
                   
    
 </body>
